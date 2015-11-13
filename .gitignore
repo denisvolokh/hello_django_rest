@@ -1,0 +1,7 @@
+.idea
+venv/
+env/
+logs/
+*.pyc
+bin/
+celerybeat-schedule
