@@ -10,10 +10,13 @@ FROM ubuntu:14.04
 MAINTAINER Denis Volokh
 
 # Set env variables used in this Dockerfile (add a unique prefix, such as DOCKYARD)
+
 # Local directory with project source
-ENV DOCKYARD_SRC=hello_django
+ENV DOCKYARD_SRC=app
+
 # Directory in container for all project files
 ENV DOCKYARD_SRVHOME=/srv
+
 # Directory in container for project source files
 ENV DOCKYARD_SRVPROJ=/srv/hello_django_rest
 
