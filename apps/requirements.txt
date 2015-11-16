@@ -5,3 +5,4 @@ python-dateutil==2.4.2
 python-mimeparse==0.1.4
 six==1.10.0
 wsgiref==0.1.2
+mongoengine=0.8.1
