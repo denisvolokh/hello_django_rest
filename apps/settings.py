@@ -67,6 +67,7 @@ DATABASES = {
 import mongoengine
 DBNAME = os.environ.get("MONGODB_NAME")
 DBHOST = os.environ.get("MONGODB_PORT_27017_TCP_ADDR")
+print "[+] Mongo DB Settings: {0} {1}".format(DBNAME, DBHOST)
 mongoengine.connect(DBNAME, host=DBHOST)
 
 # Internationalization
