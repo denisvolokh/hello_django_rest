@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 from tastypie import api
-from webapi.resources.markets import MarketResource
+from restapi_app.resources.markets import MarketResource
 
 v1_api = api.Api(api_name="v1")
 v1_api.register(MarketResource())

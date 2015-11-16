@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tastypie',
-    "restapi-app",
+    "restapi_app",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'main.urls'
+ROOT_URLCONF = 'urls'
 
-WSGI_APPLICATION = 'main.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
