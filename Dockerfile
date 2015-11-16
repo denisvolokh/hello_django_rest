@@ -22,7 +22,7 @@ ENV DOCKYARD_SRVPROJ=/srv/hello_django_rest
 
 # Update the default application repository sources list
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install git
+RUN apt-get install -y git
 RUN apt-get install -y python python-pip
 
 # Create application subdirectories
@@ -31,10 +31,10 @@ RUN mkdir media static logs
 VOLUME ["$DOCKYARD_SRVHOME/media/", "$DOCKYARD_SRVHOME/logs/"]
 
 # Copy application source code to SRCDIR
-COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
+#COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 
 # Install Python dependencies
-RUN pip install -r $DOCKYARD_SRVPROJ/requirements.txt
+#RUN pip install -r $DOCKYARD_SRVPROJ/requirements.txt
 
 # Port to expose
 EXPOSE 8000
