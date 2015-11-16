@@ -12,7 +12,7 @@ MAINTAINER Denis Volokh
 # Set env variables used in this Dockerfile (add a unique prefix, such as DOCKYARD)
 
 # Local directory with project source
-ENV DOCKYARD_SRC=app
+ENV DOCKYARD_SRC=apps
 
 # Directory in container for all project files
 ENV DOCKYARD_SRVHOME=/srv
