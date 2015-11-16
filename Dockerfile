@@ -22,6 +22,7 @@ ENV DOCKYARD_SRVPROJ=/srv/hello_django_rest
 
 # Update the default application repository sources list
 RUN apt-get update && apt-get -y upgrade
+RUN apt-get install git
 RUN apt-get install -y python python-pip
 
 # Create application subdirectories

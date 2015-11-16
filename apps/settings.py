@@ -64,10 +64,10 @@ DATABASES = {
     }
 }
 
-import mongoengine
-DBNAME = os.environ.get("MONGODB_NAME")
-DBHOST = os.environ.get("MONGODB_PORT_27017_TCP")
-mongoengine.connect(DBNAME, host=DBHOST)
+#import mongoengine
+#DBNAME = os.environ.get("MONGODB_NAME")
+#DBHOST = os.environ.get("MONGODB_PORT_27017_TCP")
+#mongoengine.connect(DBNAME, host=DBHOST)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
