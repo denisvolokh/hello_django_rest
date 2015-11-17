@@ -30,6 +30,8 @@ WORKDIR $DOCKYARD_SRVHOME
 RUN mkdir media static logs
 VOLUME ["$DOCKYARD_SRVHOME/media/", "$DOCKYARD_SRVHOME/logs/"]
 
+RUN git clone -b dev https://github.com/denisvolokh/hello_django_rest.git && cd hello_django_rest/apps && pip install -r requirements.txt 
+
 # Copy application source code to SRCDIR
 #COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 
