@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to use to Ubuntu
-FROM ubuntu:14.04
+FROM python:2.7
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Denis Volokh
@@ -21,16 +21,17 @@ ENV DOCKYARD_SRVHOME=/srv
 ENV DOCKYARD_SRVPROJ=/srv/hello_django_rest
 
 # Update the default application repository sources list
-RUN apt-get update && apt-get -y upgrade
+#RUN apt-get update && apt-get -y upgrade
+RUN apt-get update
 RUN apt-get install -y git
-RUN apt-get install -y python python-pip
+#RUN apt-get install -y python python-pip
 
 # Create application subdirectories
 WORKDIR $DOCKYARD_SRVHOME
 RUN mkdir media static logs
 VOLUME ["$DOCKYARD_SRVHOME/media/", "$DOCKYARD_SRVHOME/logs/"]
 
-RUN git clone -b dev https://github.com/denisvolokh/hello_django_rest.git && cd hello_django_rest/apps && pip install -r requirements.txt 
+RUN git clone -b dev https://github.com/denisvolokh/hello_django_rest.git && cd hello_django_rest/apps && pip install -r requirements.txt
 
 # Copy application source code to SRCDIR
 #COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
